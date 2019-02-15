@@ -3,14 +3,14 @@ https://www.sitepoint.com/counting-the-ago-time-how-to-keep-publish-dates-fresh/
 
 <?php
 
-    define( TIMEBEFORE_NOW,         'now' );
-    define( TIMEBEFORE_MINUTE,      '{num} minute ago' );
-    define( TIMEBEFORE_MINUTES,     '{num} minutes ago' );
-    define( TIMEBEFORE_HOUR,        '{num} hour ago' );
-    define( TIMEBEFORE_HOURS,       '{num} hours ago' );
-    define( TIMEBEFORE_YESTERDAY,   'yesterday' );
-    define( TIMEBEFORE_FORMAT,      '%e %b' );
-    define( TIMEBEFORE_FORMAT_YEAR, '%e %b, %Y' );
+    define( 'TIMEBEFORE_NOW',         'now' );
+    define( 'TIMEBEFORE_MINUTE',      '{num} minute ago' );
+    define( 'TIMEBEFORE_MINUTES',     '{num} minutes ago' );
+    define( 'TIMEBEFORE_HOUR',        '{num} hour ago' );
+    define( 'TIMEBEFORE_HOURS',       '{num} hours ago' );
+    define( 'TIMEBEFORE_YESTERDAY',   'yesterday' );
+    define( 'TIMEBEFORE_FORMAT',      '%e %b' );
+    define( 'TIMEBEFORE_FORMAT_YEAR', '%e %b, %Y' );
 
     function time_ago( $time )
     {
@@ -33,8 +33,8 @@ https://www.sitepoint.com/counting-the-ago-time-how-to-keep-publish-dates-fresh/
         else // falling back on a usual date format as it happened later than yesterday
             return strftime( date( 'Y', $time ) == date( 'Y' ) ? TIMEBEFORE_FORMAT : TIMEBEFORE_FORMAT_YEAR, $time );
     }
-    
-    
-    time_ago( 1442082961 )
+
+
+echo time_ago( 1550244823 );
 
 ?>
