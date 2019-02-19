@@ -3,7 +3,7 @@ https://www.sitepoint.com/counting-the-ago-time-how-to-keep-publish-dates-fresh/
 
 <?php
 
-    define( 'TIMEBEFORE_NOW',         'now' );
+    define( 'TIMEBEFORE_NOW',         'Just now' );
     define( 'TIMEBEFORE_MINUTE',      '{num} minute ago' );
     define( 'TIMEBEFORE_MINUTES',     '{num} minutes ago' );
     define( 'TIMEBEFORE_HOUR',        '{num} hour ago' );
