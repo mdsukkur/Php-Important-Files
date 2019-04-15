@@ -1,0 +1,17 @@
+$array = [
+    [
+        'id' => 42,
+        'name' => "sukkur"
+    ],
+    [
+        'id' => 43,
+        'name' => "tareq"
+    ]
+];
+
+    $id = 42;
+$cache = Cache::pull('test');
+$key = array_search($id, array_column($cache, 'id'));
+unset($cache[$key]);
+Cache::put('test',$cache,60);
+dd(Cache('test'));
